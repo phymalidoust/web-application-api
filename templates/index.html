@@ -11,17 +11,14 @@
         <script src="{{url_for('static', filename='script/style.css')}}"></script>
 </head>
 <body>
-        <h1>Upload classes' name and students' information files</h1>
+        <h1>Upload File</h1>
         <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
-                <label for="json-file-1">Select classes.json file:</label>
-                <input type="file" id="json-file-1" name="json-file-1">
-                <br>
-                <label for="json-file-2">Select students.json file:</label>
-                <input type="file" id="json-file-2" name="json-file-2">
+                <label for="xlsx-file">Select your file:</label>
+                <input type="file" id="xlsx-file" name="xlsx-file">
                 <br>
                 <input type="submit" value="Upload">
         </form>
-        
+
 
 </body>
 </html>

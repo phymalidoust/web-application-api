@@ -3,15 +3,11 @@ const form = document.querySelector('form');
 form.addEventListener('submit', (event) => {
 	event.preventDefault(); // prevent the default form submission behavior
 	
-	const fileInput1 = document.querySelector('#json-file-1');
-	const file1 = fileInput1.files[0]; // get the first selected file
-	
-	const fileInput2 = document.querySelector('#json-file-2');
-	const file2 = fileInput2.files[0]; // get the second selected file
-	
+	const fileInput = document.querySelector('#xlsx-file');
+	const file = fileInput.files[0]; // get the first selected file
+
 	const formData = new FormData();
-	formData.append('json-file-1', file1); // add the first file to the form data
-	formData.append('json-file-2', file2); // add the second file to the form data
+	formData.append('xlsx-file', file); // add the first file to the form data
 	
 	// Send POST request to /upload endpoint
 	
